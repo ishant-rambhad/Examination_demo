@@ -1,0 +1,38 @@
+# Python files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.sqlite3
+
+# Django files
+*.log
+local_settings.py
+db.sqlite3
+media/
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# IDE files
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Test coverage reports
+htmlcov/
+.coverage
+.tox/
+.nox/
+.pytest_cache/
+
+# Static files
+staticfiles/
+
+# Node modules (if using npm/yarn)
+node_modules/
