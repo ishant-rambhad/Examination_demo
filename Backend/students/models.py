@@ -32,28 +32,18 @@ class User(AbstractUser):
 
 # # Student Model
 class StudentDetails(models.Model):
-    full_name = models.CharField(max_length=255)
+    full_name = models.CharField(max_length=255, null=True, blank=True)
     email = models.EmailField(unique=True)
-    password = models.CharField(max_length=255)
-    date_of_birth = models.DateField()
-    identity_proof_type = models.CharField(max_length=50)
-    identity_proof_number = models.CharField(max_length=50)
-    course = models.CharField(max_length=50)
-    mobile_number = models.CharField(max_length=15)
-    
-    
-
+    password = models.CharField(max_length=255, null=True, blank=True)
+    date_of_birth = models.DateField(null=True, blank=True)
+    identity_proof_type = models.CharField(max_length=50, null=True, blank=True)
+    identity_proof_number = models.CharField(max_length=50, null=True, blank=True)
+    course = models.CharField(max_length=50, default="c1")
+    mobile_number = models.CharField(max_length=15, null=True, blank=True)
 
     def __str__(self):
-        print(self.full_name)
-        print(self.email)
-        print(self.password)
-        print(self.date_of_birth)
-        print(self.identity_proof_type)
-        print(self.identity_proof_number)
-        print(self.course)
-        print(self.mobile_number)
-        print("Data printed successfully")
         return self.email
+
+
 
 

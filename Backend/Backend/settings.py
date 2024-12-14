@@ -211,8 +211,14 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'Examination_app',
-        'HOST': 'localhost',  # Use 127.0.0.1 instead of localhost for consistency
-        'PORT': 27017,         # Default MongoDB port
+        'ENFORCE_SCHEMA': True,
+        'CLIENT': {
+            'host': 'mongodb://localhost:27017/',
+            'port': 27017,
+            'username': 'root',
+            'password': '',
+        }
+             # Default MongoDB port
     }
 }
 
